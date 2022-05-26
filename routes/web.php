@@ -17,8 +17,6 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', 'Guest\HomeController@index')->name('home');
-
 Route::middleware('auth') /* se registrato */
 ->namespace('Admin') /* cartella di controller */
 ->prefix('home') /* URI */
@@ -27,3 +25,5 @@ Route::middleware('auth') /* se registrato */
     Route::get('/', 'HomeController@index')->name('home');
     Route::resource('posts', 'PostController');
 });
+
+Route::get('/{any}', 'Guest\HomeController@index')->where('any','.*');

@@ -12196,3 +12196,15 @@ div.add {
   padding-left: 130px;
 }
 
+header.my-header {
+  height: 60px;
+  background-color: aquamarine;
+}
+
+header.my-header a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+  margin: 0 1rem;
+}
+
